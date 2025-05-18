@@ -1,0 +1,30 @@
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* align items to the top (center vertically centers children) */
+  padding: 40px;
+  padding-left: 120px;
+  padding-right: 120px;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 500px;
+  padding-right: 80px;
+}
+
+.about-text h2 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.about-stack {
+  flex-shrink: 0; /* don't let it shrink */
+  padding-right: 200px;
+}
