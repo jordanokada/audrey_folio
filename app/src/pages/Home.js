@@ -10,7 +10,7 @@ const Home = () => {
       ref={containerRef}
       style={{
         position: 'relative',
-        paddingTop: '3rem',
+        paddingTop: '10rem',
         paddingLeft: '7rem',
         paddingRight: '7rem',
         display: 'flex',
