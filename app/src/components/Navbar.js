@@ -1,51 +1,7 @@
-// import { useState } from 'react'
-// import { NavLink } from 'react-router-dom'
-// import './navbar.css'
-
-// const Navbar = () => {
-//   const [showNavbar, setShowNavbar] = useState(false)
-
-//   const handleShowNavbar = () => {
-//     setShowNavbar(!showNavbar)
-//   }
-
-//   return (
-//     <nav className="navbar">
-//       <div className="container">
-//         <div className="logo">
-//           {/* Replace with your site name or leave blank */}
-//           <span>Audrey Geer</span>
-//         </div>
-//         <div className="menu-icon" onClick={handleShowNavbar}>
-//           {/* Unicode hamburger icon */}
-//           <span style={{ fontSize: "2rem", cursor: "pointer" }}>&#9776;</span>
-//         </div>
-//         <div className={`nav-elements  ${showNavbar && 'active'}`}>
-//           <ul>
-//             <li>
-//               <NavLink to="/">Home</NavLink>
-//             </li>
-//             <li>
-//               <NavLink to="/about">About</NavLink>
-//             </li>
-//             <li>
-//               <NavLink to="/workexperience">Work Experience</NavLink>
-//             </li>
-//             <li>
-//               <NavLink to="/academicwork">Academic Work</NavLink>
-//             </li>
-//           </ul>
-//         </div>
-//       </div>
-//     </nav>
-//   )
-// }
-
-// export default Navbar
-
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './navbar.css'
+import resume from '../assets/resume.pdf'
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false)
@@ -58,7 +14,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-          <span>Audrey Geer</span>
+          <NavLink to="/">Audrey Geer</NavLink>
+          {/* <span>Audrey Geer</span> */}
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <span style={{ fontSize: "2rem", cursor: "pointer" }}>&#9776;</span>
@@ -66,22 +23,20 @@ const Navbar = () => {
         <div className={`nav-elements  ${showNavbar && 'active'}`}>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
               <NavLink to="/about">About</NavLink>
             </li>
             <li className="dropdown">
               <NavLink to="/workexperience">Work Experience</NavLink>
               <ul className="dropdown-menu">
-                <li> <NavLink to="/workexperience/job1">Job 1</NavLink> </li>
-                <li> <NavLink to="/workexperience/job2">Job 2</NavLink> </li>
-                <li> <NavLink to="/workexperience/job3">Job 3</NavLink> </li>
+                <li> <NavLink to="/workexperience/legislativeaid">Legislative Aid</NavLink> </li>
+                <li> <NavLink to="/workexperience/marketinginternship">Marketing Internship</NavLink> </li>
+                <li> <NavLink to="/workexperience/craftservices">Craft Services</NavLink> </li>
               </ul>
             </li>
             <li>
               <NavLink to="/academicwork">Academic Work</NavLink>
             </li>
+            <li> <a href={resume} target="_blank" rel="noopener noreferrer download">Resume</a></li>
           </ul>
         </div>
       </div>
